@@ -27,5 +27,9 @@ python manage.py createsuperuser
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/17215151/206468060-16406f4b-8fb4-4d07-9742-38e7aa572bc3.png)
 ![image](https://user-images.githubusercontent.com/17215151/206468084-31739e95-cad3-4c92-aa51-55aea276bb2d.png)
+
 Registration and Login page
+
 ![image](https://user-images.githubusercontent.com/17215151/206468137-a5328ce9-9b5a-406b-8586-78f0a8c61e5b.png)
+
+Home page
