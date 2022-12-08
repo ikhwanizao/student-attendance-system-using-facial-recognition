@@ -17,3 +17,9 @@ pip3 install -r requirements.txt
 ```python
 python manage.py runserver
 ``` 
+
+**Create your own credential before logging into the system**<br/>
+
+```python
+python manage.py createsuperuser
+```
