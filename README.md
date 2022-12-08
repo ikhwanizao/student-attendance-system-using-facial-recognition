@@ -31,6 +31,7 @@ Registration and Login page
 ![image](https://user-images.githubusercontent.com/17215151/206468084-31739e95-cad3-4c92-aa51-55aea276bb2d.png)
 
 Home page
+
 ![image](https://user-images.githubusercontent.com/17215151/206468137-a5328ce9-9b5a-406b-8586-78f0a8c61e5b.png)
 
 Lecturer Profile page
