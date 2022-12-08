@@ -25,11 +25,19 @@ python manage.py createsuperuser
 ```
 
 ## Screenshots
+Registration and Login page
+
 ![image](https://user-images.githubusercontent.com/17215151/206468060-16406f4b-8fb4-4d07-9742-38e7aa572bc3.png)
 ![image](https://user-images.githubusercontent.com/17215151/206468084-31739e95-cad3-4c92-aa51-55aea276bb2d.png)
 
-Registration and Login page
-
+Home page
 ![image](https://user-images.githubusercontent.com/17215151/206468137-a5328ce9-9b5a-406b-8586-78f0a8c61e5b.png)
 
-Home page
+Lecturer Profile page
+![image](https://user-images.githubusercontent.com/17215151/206468680-59bad825-aa53-4548-b544-806755034ca0.png)
+
+Student Registration page
+![image](https://user-images.githubusercontent.com/17215151/206468773-0e4c94be-6088-4698-8574-94fa79c5b31d.png)
+
+Face Recognition panel
+![image](https://user-images.githubusercontent.com/17215151/206468835-738a5611-683d-4cbd-82c2-ff37cba8e6d3.png)
