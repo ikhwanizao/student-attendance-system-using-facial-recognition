@@ -13,3 +13,7 @@ To run the web app on your local computer, install the required libraries(requir
 ```python
 pip3 install -r requirements.txt
 ``` 
+<br>and run the following command in the terminal:<br>
+```python
+python manage.py runserver
+``` 
