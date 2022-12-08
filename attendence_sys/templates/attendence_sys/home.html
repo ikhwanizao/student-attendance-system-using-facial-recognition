@@ -1,0 +1,295 @@
+{% extends 'attendence_sys/main.html' %} {% block content %}
+<div class="container">
+  {% for message in messages %} {% if message.tags == 'error' %}
+  <div class="alert alert-danger">{{ message }}</div>
+  {% else %}
+  <div class="alert alert-success">{{ message }}</div>
+  {% endif %} {% endfor %}
+  
+  
+  <div class="row">
+    <div class="col-md-6" style="margin-top: 20px">
+      <div class="card card-body" style="left: 50%">
+        <center><h3>Take Attendence</h3></center>
+        <form
+          class="form-horizontal"
+          action="{% url 'attendence' %}"
+          method="POST"
+        >
+          {% csrf_token %}
+          {% comment %}
+          <div class="form-group">
+            <label for="sel1">Select Program:</label>
+            <select name="program" class="form-control" id="sel1">
+              <option value="BIT">BIT</option>
+              <option value="BIP">BIP</option>
+              <option value="BIW">BIW</option>
+              <option value="BIS">BIS</option>
+              <option value="BIM">BIM</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="sel1">Select Year:</label>
+            <select name="year" class="form-control" id="sel1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+          {% endcomment %}
+          <div class="form-group">
+            <label for="sel1">Select Subject:</label>
+            {{ studentForm.subjects }}
+          </div>
+          {% comment %}
+          <div class="form-group">
+            <label for="sel1">Select Section:</label>
+            <select name="section" class="form-control" id="sel1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+            </select>
+          </div>
+          {% endcomment %}
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="sel1">Select Start Time:</label>
+                <select name="classstart" class="form-control" id="sel1">
+                  <option value="08:00 am">08:00 am</option>
+                  <option value="09:00 am">09:00 am</option>
+                  <option value="10:00 am">10:00 am</option>
+                  <option value="11:00 am">11:00 am</option>
+                  <option value="12:00 pm">12:00 pm</option>
+                  <option value="01:00 pm">01:00 pm</option>
+                  <option value="02:00 pm">02:00 pm</option>
+                  <option value="03:00 pm">03:00 pm</option>
+                  <option value="04:00 pm">04:00 pm</option>
+                  <option value="05:00 pm">05:00 pm</option>
+                  <option value="06:00 pm">06:00 pm</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="sel1">Select End Time:</label>
+                <select name="classend" class="form-control" id="sel1">
+                  <option value="08:00 am">08:00 am</option>
+                  <option value="09:00 am">09:00 am</option>
+                  <option value="10:00 am">10:00 am</option>
+                  <option value="11:00 am">11:00 am</option>
+                  <option value="12:00 pm">12:00 pm</option>
+                  <option value="01:00 pm">01:00 pm</option>
+                  <option value="02:00 pm">02:00 pm</option>
+                  <option value="03:00 pm">03:00 pm</option>
+                  <option value="04:00 pm">04:00 pm</option>
+                  <option value="05:00 pm">05:00 pm</option>
+                  <option value="06:00 pm">06:00 pm</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="sel1">Select Day:</label>
+                <select name="classday" class="form-control" id="sel1">
+                  <option value="Monday">Monday</option>
+                  <option value="Tuesday">Tuesday</option>
+                  <option value="Wednesday">Wednesday</option>
+                  <option value="Thursday">Thursday</option>
+                  <option value="Friday">Friday</option>
+                  <option value="Saturday">Saturday</option>
+                  <option value="Sunday">Sunday</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          {% comment %}
+          <div class="form-group">
+            <label for="sel1">Select Start Time:</label>
+            <select name="classstarttime" class="form-control" id="sel1">
+              <option value="" disabled selected hidden>Select</option>
+              <option value="0800">08:00</option>
+              <option value="0900">09:00</option>
+              <option value="1000">10:00</option>
+              <option value="1100">11:00</option>
+              <option value="1200">12:00</option>
+              <option value="1300">13:00</option>
+              <option value="1400">14:00</option>
+              <option value="1500">15:00</option>
+              <option value="1600">16:00</option>
+              <option value="1700">17:00</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="sel1">Select End Time:</label>
+            <select name="classendtime" class="form-control" id="sel1">
+              <option value="" disabled selected hidden>Select</option>
+              <option value="0800">08:00</option>
+              <option value="0900">09:00</option>
+              <option value="1000">10:00</option>
+              <option value="1100">11:00</option>
+              <option value="1200">12:00</option>
+              <option value="1300">13:00</option>
+              <option value="1400">14:00</option>
+              <option value="1500">15:00</option>
+              <option value="1600">16:00</option>
+              <option value="1700">17:00</option>
+            </select>
+          </div>
+          {% endcomment %} {% comment %}
+          <div class="form-group">
+            <label for="sel1">Select Period:</label>
+            <select name="period" class="form-control" id="sel1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </div>
+          {% endcomment %}
+          <button type="submit" class="btn btn-block btn-info">
+            Take Attendence
+          </button>
+        </form>
+      </div>
+    </div>
+    {% comment %}
+    <div class="col-md-6" style="margin-top: 20px">
+      <div class="card card-body">
+        <center><h3>Add Student</h3></center>
+        <form
+          class="form-horizontal"
+          action=""
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="control-label">Enter First Name:</label>
+                {{ studentForm.firstname }}
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="control-label">Enter Last Name:</label>
+                {{ studentForm.lastname }}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class="control-label">Enter Registration ID:</label>
+                {{ studentForm.matricno }}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="sel1">Select Program:</label>
+                {{ studentForm.program }}
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="sel1">Select Year:</label>
+                {{ studentForm.year }}
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="sel1">Select Section:</label>
+                {{ studentForm.section }}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <div class="form-group" style="border: none">
+                <label class="control-label">Upload Profile Picture:</label>
+                {{ studentForm.profile_pic }}
+              </div>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+          <button type="submit" class="btn btn-block btn-info">Submit</button>
+        </form>
+      </div>
+    </div>
+    {% endcomment %}
+  </div>
+
+  {% comment %}
+  <div class="row">
+    <div class="col-md-6" style="margin-top: 20px">
+      <div class="card card-body">
+        <center><h3>Update Student Details</h3></center>
+        <form
+          class="form-horizontal"
+          action="{% url 'updateStudentRedirect' %}"
+          method="POST"
+        >
+          {% csrf_token %}
+          <div class="form-group">
+            <label class="control-label">Enter Student Registration ID:</label>
+            <input
+              name="reg_id"
+              type="text"
+              class="form-control"
+              placeholder="Ex: AI190000"
+            />
+          </div>
+          <div class="form-group">
+            <label for="sel1">Select Program:</label>
+            <select name="program" class="form-control" id="sel1">
+              <option value="BIT">BIT</option>
+              <option value="BIP">BIP</option>
+              <option value="BIW">BIW</option>
+              <option value="BIS">BIS</option>
+              <option value="BIM">BIM</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-block btn-info">Submit</button>
+        </form>
+      </div>
+    </div>
+    {% endcomment %}
+    <div class="col-md-6" style="margin-top: 20px">
+      <div class="card card-body" style="left: 50%">
+        <center><h3>Search Attendence</h3></center>
+        <a href="{% url 'searchattendence' %}" class="btn btn-block btn-info"
+          >Click Here</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
