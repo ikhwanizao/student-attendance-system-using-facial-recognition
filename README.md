@@ -5,3 +5,11 @@
 ### Built With
 
 Django Framework
+
+## Getting Started
+
+To run the web app on your local computer, install the required libraries(requirements.txt) using the command:
+
+```python
+pip3 install -r requirements.txt
+``` 
