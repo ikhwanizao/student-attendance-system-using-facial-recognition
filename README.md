@@ -4,7 +4,7 @@
 
 ### Built With
 
-Django Framework
+Django Framework https://www.djangoproject.com
 
 ## Getting Started
 
@@ -24,4 +24,4 @@ python manage.py runserver
 python manage.py createsuperuser
 ```
 
-![image](https://user-images.githubusercontent.com/17215151/206463784-c4d8614c-416c-41ad-9505-a10a4f25bb98.png)
+
