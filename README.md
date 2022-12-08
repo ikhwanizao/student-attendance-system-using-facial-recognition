@@ -4,5 +4,5 @@
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
+* [![Next][Next.js]][[Next-url](https://www.djangoproject.com)]
 *
