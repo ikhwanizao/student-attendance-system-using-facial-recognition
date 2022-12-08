@@ -24,7 +24,10 @@ python manage.py runserver
 python manage.py createsuperuser
 ```
 
-## Screenshots
+## Video and Screenshots
+
+https://user-images.githubusercontent.com/17215151/206487860-994b6d2a-6fa1-4324-af1f-306d7056843c.mp4
+
 Registration and Login page
 
 ![image](https://user-images.githubusercontent.com/17215151/206468060-16406f4b-8fb4-4d07-9742-38e7aa572bc3.png)
@@ -43,5 +46,3 @@ Student Registration page
 Face Recognition panel
 ![image](https://user-images.githubusercontent.com/17215151/206468835-738a5611-683d-4cbd-82c2-ff37cba8e6d3.png)
 ![attendance record](https://user-images.githubusercontent.com/17215151/206469212-2f8b9a2e-4bd3-4be5-9240-0001066fe839.png)
-
-![2_AI190125_Video_Student_Attendance_System_using_Facial_Recognition_AdobeExpress (1)](https://user-images.githubusercontent.com/17215151/206474300-ec118c43-bdc8-4779-b0b9-660d5a4c723a.gif)
